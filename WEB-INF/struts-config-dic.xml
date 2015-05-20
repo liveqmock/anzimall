@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="DiCForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="id" type="java.lang.Integer" />
+			<form-property name="uid" type="java.lang.String" />
+			<form-property name="bid" type="java.lang.String" />
+			<form-property name="bank" type="java.lang.String" />
+			<form-property name="key" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />	
+			<form-property name="channel" type="java.lang.String"/>
+			<form-property name="cardno" type="java.lang.String"/>
+			<form-property name="province" type="java.lang.String"/>
+			<form-property name="city" type="java.lang.String"/>
+			<form-property name="county" type="java.lang.String"/>
+			<form-property name="address" type="java.lang.String"/>
+			<form-property name="year" type="java.lang.String"/>
+			<form-property name="month" type="java.lang.String"/>
+			<form-property name="day" type="java.lang.String"/>
+			<form-property name="hour" type="java.lang.String"/>
+			<form-property name="content" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />                   
+			<form-property name="gender" type="java.lang.String" />
+			<form-property name="cookies" type="java.lang.String"/>
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="date" type="java.lang.String" />
+			<form-property name="identity" type="java.lang.String" />
+			<form-property name="username" type="java.lang.String"/>
+			<form-property name="mobile" type="java.lang.String"/>
+			<form-property name="password" type="java.lang.String"/>
+			<form-property name="oldpassword" type="java.lang.String"/>
+			<form-property name="newpassword" type="java.lang.String"/>
+			<form-property name="excel" type="org.apache.struts.upload.FormFile" />
+			<form-property name="sendDateTime" type="java.lang.String"/>
+			<form-property name="merchantname" type="java.lang.String"/>
+			<form-property name="startDate" type="java.lang.String"/>
+			<form-property name="endDate" type="java.lang.String"/>
+			<form-property name="port" type="java.lang.String"/>
+			<form-property name="email" type="java.lang.String"/>
+			<form-property name="qq" type="java.lang.String"/>
+			<form-property name="orderPrice" type="java.lang.String"/>
+			<form-property name="postage" type="java.lang.String"/>
+			<form-property name="payway" type="java.lang.String"/>
+			<form-property name="money" type="java.lang.String"/>
+			<form-property name="bankname" type="java.lang.String"/>
+			<form-property name="order" type="java.lang.String"/>
+			<form-property name="pageNo" type="java.lang.String"/>
+			<form-property name="pageSize" type="java.lang.String"/>
+			<form-property name="phone" type="java.lang.String"/>
+			<form-property name="nick" type="java.lang.String"/>
+			<form-property name="code" type="java.lang.String"/>
+			<form-property name="postcode" type="java.lang.String"/>
+			<form-property name="p" type="java.lang.String"/>
+			<form-property name="birthday" type="java.lang.String"/>
+			<form-property name="vipcardtype" type="java.lang.String"/>
+			<form-property name="cardvaliditybegin" type="java.lang.String"/>
+			<form-property name="cardvalidityend" type="java.lang.String"/>
+			<form-property name="storename" type="java.lang.String"/>
+			<form-property name="vipcardno" type="java.lang.String"/>
+			<form-property name="carddate" type="java.lang.String"/>
+			<form-property name="consumetotal" type="java.lang.String"/>
+			<form-property name="realname" type="java.lang.String"/>
+			<form-property name="bankno" type="java.lang.String"/>
+			<form-property name="bankcardno" type="java.lang.String"/>
+			<form-property name="state" type="java.lang.String"/>
+			<form-property name="sex" type="java.lang.String"/>
+			<form-property name="detail" type="java.lang.String"/>
+			<form-property name="consumtotal" type="java.lang.String"/>
+			<form-property name="getdate" type="java.lang.String"/>
+			<form-property name="enddate" type="java.lang.String"/>
+			<form-property name="consumdate" type="java.lang.String"/>
+			<form-property name="location" type="java.lang.String"/>
+			<form-property name="checkcode" type="java.lang.String"/>
+			<form-property name="page" type="java.lang.String"/>
+			<form-property name="numPerPage" type="java.lang.String"/>
+			<form-property name="portrait" type="java.lang.String" />
+			<form-property name="fileImgs" type="org.apache.struts.upload.FormFile" />
+			<form-property name="card" type="java.lang.String"/>
+			<form-property name="defaultstate" type="java.lang.String"/>
+		</form-bean>		
+	</form-beans>
+
+	<action-mappings>		
+		<action path="/dic"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="DiCForm" parameter="method" scope="request"
+			validate="false">
+			<forward name="to_user_address" path="/cglib/user/address.jsp" />
+			<forward name="to_user_cbd" path="/cglib/user/cbd.jsp" />
+			<forward name="to_user_detail" path="/cglib/user/userdetail.jsp" />
+			<forward name="to_user_vipcard" path="/cglib/user/vipcard.jsp" />
+			<forward name="to_register_over" path="/cglib/register/register_over.jsp" />
+			<forward name="to_login" path="/cglib/login.jsp" />
+			<forward name="to_user_bankcard" path="/cglib/user/bankcard.jsp" />
+			<forward name="user_password" path="/cglib/user/password.jsp" />
+			<forward name="to_index" path="/cglib/index.jsp" />
+			<forward name="to_user_coupons" path="/cglib/user/coupons.jsp" />
+			
+			<forward name="to_register" path="/cglib/register/register_info.jsp" />
+			
+			<forward name="to_change_password" path="/cglib/password/password_reset.jsp" />
+			
+			<forward name="to_user_spread" path="/cglib/user/spread.jsp" />
+			
+			<forward name="help" path="/cglib/article/help.jsp" />
+				
+		</action>		
+	</action-mappings>
+
+</struts-config>

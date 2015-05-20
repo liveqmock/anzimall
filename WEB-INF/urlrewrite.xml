@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">        
+<urlrewrite>
+
+<!-- 提现测试-->
+<rule>
+   <from>^/test.shtml$</from>
+   <to>/cglib/test.jsp</to>
+</rule>
+<!-- 提现测试-->
+<rule>
+   <from>^/testmoney.shtml$</from>
+   <to>/tjix.do?method=testmoney</to>
+</rule>
+<!-- 后台登陆系统beg-->
+	<rule>  
+	   <from>^/web.shtml$</from>
+	   <to>/main.do?method=django</to>
+	</rule>
+	<rule>  
+	   <from>^/logout.shtml$</from>
+	   <to>/main.do?method=logout</to>
+	</rule>
+	<rule>  
+	   <from>^/main.shtml$</from>
+	   <to>/main.do?method=semain</to>
+	</rule>
+	
+	<rule>  
+	   <from>^/utem.shtml$</from>
+	   <to>/admin.do?method=login</to>
+	</rule>
+	
+	<rule>  
+	   <from>^/so.shtml$</from>
+	   <to>/admin.do?method=test2</to>
+	</rule>
+	
+	<rule>  
+	   <from>^/fje.shtml$</from>
+	   <to>/tjix.do?method=toindex</to>
+	</rule>
+	
+	
+	
+	
+	<!--以下为积分商城账户注册-->	
+	
+	<!--跳转到积分商城账户注册页面-->
+	<rule>  
+	   <from>^/to_register_info.shtml$</from>
+	   <to>/dic.do?method=toRegister</to>
+	</rule>
+	
+	<!--跳转到积分商城账户注册协议页面-->
+	<rule>  
+	   <from>^/to_register_agreement.shtml$</from>
+	   <to>/cglib/register/register_agreement.jsp</to>
+	</rule>
+	
+	<!--注册时检查手机账号是否已注册的方法实现-->
+	<rule>  
+	   <from>^/checkphone.shtml$</from>
+	   <to>/dic.do?method=checkPhone</to>
+	</rule>
+	
+	<!--积分商城账户注册页面点击获取验证码的方法实现-->
+	<rule>  
+	   <from>^/getverificationcode.shtml$</from>
+	   <to>/dic.do?method=registeredone</to>
+	</rule>
+	
+	<!-- 积分商城账户绑定银行卡时查询银行卡行号的方法实现-->
+	<rule>  
+	   <from>^/to_query_bankno.shtml$</from>
+	   <to>/dic.do?method=queryBankNo</to>
+	</rule>
+	
+	
+	<!-- 积分商城账户绑定银行卡时检测银行卡信息的方法实现-->
+	<rule>  
+	   <from>^/checkBankcard.shtml$</from>
+	   <to>/dic.do?method=checkBankcard</to>
+	</rule>
+	
+	<!-- 积分商城账户注册登录具体实现-->
+	<rule>  
+	   <from>^/registered_info.shtml$</from>
+	   <to>/dic.do?method=registered</to>
+	</rule>
+	
+	<!-- 切换城市-->
+	<rule>  
+	   <from>^/to_change_city.shtml$</from>
+	   <to>/cglib/city/city.jsp</to>
+	</rule>
+	
+	<!-- 登录注册成功后，去用户详情页面-->
+	<rule>  
+	   <from>^/to_register_detail.shtml$</from>
+	   <to>/cglib/register/register_detail.jsp</to>
+	</rule>
+	
+	<!-- 图片上传公共方法 -->
+	<rule>  
+	   <from>^/Upload.shtml$</from>
+	   <to>/dic.do?method=Upload</to>
+	</rule>
+	
+	<!-- 注册时添加用户详情具体实现-->
+	<rule>  
+	   <from>^/register_detail.shtml$</from>
+	   <to>/dic.do?method=saveUserDetail</to>
+	</rule>
+	
+	<!-- 修改和添加用户详情具体实现-->
+	<rule>  
+	   <from>^/to_register_over.shtml$</from>
+	   <to>/cglib/register/register_over.jsp</to>
+	</rule>
+	
+	<!-- 付款成功后，后台执行的方法-->
+	<rule>  
+	   <from>^/paysuccess.shtml$</from>
+	   <to>/tjix.do?method=paySuccess</to>
+	</rule>
+	
+	
+	
+	
+	
+	
+	
+	<!-- 跳转去安淘惠账户登录页面-->
+	<rule>  
+	   <from>^/login_basic.shtml$</from>
+	   <to>/cglib/login.jsp</to>
+	</rule>
+	
+	<!-- 安淘惠账户登录具体实现-->
+	<rule>  
+	   <from>^/login.shtml$</from>
+	   <to>/dic.do?method=login</to>
+	</rule>
+	
+	<!-- 安淘惠账户退出登录具体实现-->
+	<rule>  
+	   <from>^/to_logout.shtml$</from>
+	   <to>/dic.do?method=logout</to>
+	</rule>
+
+
+
+<!-- 跳转去安淘惠账户找回密码页面-->
+	<rule>  
+	   <from>^/to_getPassword.shtml$</from>
+	   <to>/cglib/password/password_name.jsp</to>
+	</rule>
+	
+	
+	<!-- 首页中找回密码检测手机号是否有效-->
+	<rule>  
+	   <from>^/getPasswordCheckPhone.shtml$</from>
+	   <to>/dic.do?method=getPasswordCheckPhone</to>
+	</rule>
+	
+	<!-- 安淘惠账户校验身份具体实现-->
+	<rule>  
+	   <from>^/check_user.shtml$</from>
+	   <to>/dic.do?method=checkIdentity</to>
+	</rule>
+	
+	
+	<!-- 身份校验无误去修改密码页面-->
+	<rule>  
+	   <from>^/to_change_password.shtml$</from>
+	   <to>/dic.do?method=toresetPassword</to>
+	</rule>
+	
+	<!-- 身份校验无误修改密码具体实现-->
+	<rule>  
+	   <from>^/reset_password.shtml$</from>
+	   <to>/dic.do?method=resetPassword</to>
+	</rule>
+	
+	<!-- 修改密码成功后跳转页面-->
+	<rule>  
+	   <from>^/to_reset_success.shtml$</from>
+	   <to>/cglib/password/password_over.jsp</to>
+	</rule>
+
+
+
+
+
+	
+	
+	
+	<!-- 用户中心跳转收货地址管理页面前先查询收货地址信息具体实现-->
+	<rule>  
+	   <from>^/user_address.shtml$</from>
+	   <to>/dic.do?method=queryUserAddress</to>
+	</rule>		
+	
+	<!-- 用户中心添加收货地址信息具体实现-->
+	<rule>  
+	   <from>^/addUserAddress.shtml$</from>
+	   <to>/dic.do?method=addUserAddress</to>
+	</rule>	
+	
+	<!-- 用户中心修改收货地址信息具体实现-->
+	<rule>  
+	   <from>^/updateUserAddress.shtml$</from>
+	   <to>/dic.do?method=updateUserAddress</to>
+	</rule>	
+	
+	<!-- 删除用户的收货地址-->
+	<rule>  
+	   <from>^/delUserAddress.shtml$</from>
+	   <to>/dic.do?method=delUserAddress</to>
+	</rule>
+	
+	<!-- 设置用户的收货地址-->
+	<rule>  
+	   <from>^/setUserAddress.shtml$</from>
+	   <to>/dic.do?method=setUserAddress</to>
+	</rule>
+	
+	
+	<!-- 用户中心跳转去我的商业圈页面先查询用户商圈信息具体实现-->
+	<rule>  
+	   <from>^/user_cbd.shtml$</from>
+	   <to>/dic.do?method=queryUserCbd</to>
+	</rule>	
+	
+	<!-- 用户中心添加用户商圈信息具体实现-->
+	<rule>  
+	   <from>^/addUserCdb.shtml$</from>
+	   <to>/dic.do?method=addUserCbd</to>
+	</rule>	
+	
+	<!-- 用户中心修改用户商圈信息具体实现-->
+	<rule>  
+	   <from>^/updateUserCdb.shtml$</from>
+	   <to>/dic.do?method=updateUserCbd</to>
+	</rule>
+	
+	<!-- 用户中心删除用户商圈信息具体实现-->
+	<rule>  
+	   <from>^/delUserCdb.shtml$</from>
+	   <to>/dic.do?method=delUserCdb</to>
+	</rule>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 用户中心跳转去修改密码页面-->
+	<rule>  
+	   <from>^/to_user_password.shtml$</from>
+	   <to>/dic.do?method=toResetPassword</to>
+	</rule>
+	
+	<!-- 用户中心修改密码的具体实现-->
+	<rule>  
+	   <from>^/user_password.shtml$</from>
+	   <to>/dic.do?method=userResetPassword</to>
+	</rule>
+	
+	<!-- 用户中心修改密码的实现后跳转去登录页面-->
+	<rule>  
+	   <from>^/to_login.shtml$</from>
+	   <to>/cglib/dialog/login.jsp</to>
+	</rule>
+	
+	
+	
+	<!-- 用户中心跳转去基本信息页面前先查询用户的基本信息-->
+	<rule>  
+	   <from>^/user_detail.shtml$</from>
+	   <to>/dic.do?method=queryUserDetail</to>
+	</rule>
+	
+	<!-- 用户中心跳转去基本信息页面中修改用户基本信息具体实现-->
+	<rule>  
+	   <from>^/updateUserDetail.shtml$</from>
+	   <to>/dic.do?method=updateUserDetail</to>
+	</rule>
+		
+		
+		
+	
+	<!-- 用户中心跳转去我的银行卡前先查询-->
+	<rule>  
+	   <from>^/user_bankcard.shtml$</from>
+	   <to>/dic.do?method=queryUserBankCard</to>
+	</rule>
+	
+	<!-- 用户中心跳转去我的银行卡页面-->
+	<rule>  
+	   <from>^/to_user_bankcard.shtml$</from>
+	   <to>/cglib/user/bankcard.jsp</to>
+	</rule>
+		
+	
+	
+	
+	<!-- 用户中心跳转去我的会员卡前先查询该用户的会员卡-->
+	<rule>  
+	   <from>^/user_vipcard.shtml$</from>
+	   <to>/dic.do?method=queryUserVip</to>
+	</rule>
+	
+	
+	<!-- 用户中心的会员卡页面用户通过条件查询自己的会员卡列表-->
+	<rule>  
+	   <from>^/to_queryVipCardByCondition$</from>
+	   <to>/dic.do?method=queryUserVipByCondition</to>
+	</rule>
+	
+	
+	<!-- 重新加载缓存 -->
+	<rule>  
+	   <from>^/reload.shtml$</from>
+	   <to>/tjix.do?method=reload</to>
+	</rule>
+	<!-- 用户添加会员卡 -->
+	<rule>
+	   <from>^/user_add_vipcard.shtml$</from>
+	   <to>/tjix.do?method=userAddVipcard</to>
+	</rule>
+	
+	<!-- 用户添加会员卡 -->
+	<rule>
+	   <from>^/del_uservipcard.shtml$</from>
+	   <to>/tjix.do?method=delUserVipcard</to>
+	</rule>
+	
+	<!-- 用户添加会员卡先查询数据 -->
+	<rule>
+	   <from>^/toVipcardBindBank.shtml$</from>
+	   <to>/tjix.do?method=toVipcardBindBank</to>
+	</rule>
+	
+	
+	<!-- 用户添加会员卡先查询数据 -->
+	<rule>
+	   <from>^/user_spread.shtml$</from>
+	   <to>/dic.do?method=queryUserSpread</to>
+	</rule>
+	
+		
+	<!-- 查看更多-->
+	<rule>  
+	   <from>^/to_user_siderbar.shtml$</from>
+	   <to>/cglib/user/user_sidebar.jsp</to>
+	</rule>
+	
+	<!-- 积分说明-->
+	<rule>  
+	   <from>^/to_integer_description.shtml$</from>
+	   <to>/cglib/article/integer.jsp</to>
+	</rule>
+	
+	
+	<!-- 切换城市 -->
+	<rule>
+	   <from>^/updatecity.html$</from>
+	   <to>/tjix.do?method=updateCity</to>
+	</rule>
+	
+	
+	<!-- 用户添加银行卡 -->
+	<rule>
+	   <from>^/userAddBankcard.shtml$</from>
+	   <to>/tjix.do?method=userAddBankcard</to>
+	</rule>
+
+		<!-- 用户添加银行卡成功后跳转页面 -->
+	<rule>
+	   <from>^/add_bank_res.shtml$</from>
+	   <to>/cglib/dialog/add_to_bankcard_res.jsp</to>
+	</rule>
+	
+	<!-- 用户删除银行卡 -->
+	<rule>
+	   <from>^/userDelBankcard.shtml$</from>
+	   <to>/tjix.do?method=delUserBankcard</to>
+	</rule>
+	
+	
+	<!-- 查询用户的兑换 -->
+	<rule>
+	   <from>^/user_exchange.shtml$</from>
+	   <to>/tjix.do?method=getUserExchangeList</to>
+	</rule>
+	
+	<!-- 按商品名称查询用户的兑换 -->
+	<rule>
+	   <from>^/user_exchange_name.shtml$</from>
+	   <to>/tjix.do?method=getUserExchangeByNameList</to>
+	</rule>
+	
+	<!-- 时时查询用户的积分总额 -->
+	<rule>
+	   <from>^/getUserTotalIntegral.shtml$</from>
+	   <to>/tjix.do?method=getTotalIntegral</to>
+	</rule>
+	
+	<!-- 时时查询用户的积分使用详情 -->
+	<rule>
+	   <from>^/user_integraldeductionlist.shtml$</from>
+	   <to>/tjix.do?method=getUserIntegralDeduction</to>
+	</rule>
+	
+	<!-- 查询用户的积分使用详情 -->
+	<rule>
+	   <from>^/user_integraldeduction.shtml$</from>
+	   <to>/tjix.do?method=getUserIntegralDeductionList</to>
+	</rule>
+	
+	<!-- 按条件查询用户的积分使用详情 -->
+	<rule>
+	   <from>^/user_integraldeductionbycondition.shtml$</from>
+	   <to>/tjix.do?method=getUserIntegralDeductionByconditionList</to>
+	</rule>
+	
+	
+	<!-- 时时查询用户的积分获取详情 -->
+	<rule>
+	   <from>^/user_integralproducelist.shtml$</from>
+	   <to>/tjix.do?method=getUserIntegralProduce</to>
+	</rule>
+	
+	<!-- 查询用户的积分获取详情 -->
+	<rule>
+	   <from>^/user_integralproduce.shtml$</from>
+	   <to>/tjix.do?method=getUserIntegralProduceList</to>
+	</rule>
+	
+	<!-- 按条件查询用户的积分获取详情 -->
+	<rule>
+	   <from>^/user_integralproducebycondition.shtml$</from>
+	   <to>/tjix.do?method=getUserIntegralProduceByconditonList</to>
+	</rule>
+	
+	<!-- 查询更多商家会员卡信息 -->
+	<rule>
+	   <from>^/get_more_merchantsvipcatd.shtml$</from>
+	   <to>/tjix.do?method=getMoreMerchantsVipcard</to>
+	</rule>
+	
+	
+	
+	<!-- 按商家区域查询商家列表信息 -->
+	<rule>
+	   <from>^/get_merchants_county$</from>
+	   <to>/tjix.do?method=getMoreMerchantsByCounty</to>
+	</rule>
+	
+	<!-- 按商家品牌查询商家列表信息 -->
+	<rule>
+	   <from>^/get_merchants_type$</from>
+	   <to>/tjix.do?method=getMoreMerchantsByType</to>
+	</rule>
+	
+	
+	<!-- 查询用户地理位置信息 -->
+	<rule>
+	   <from>^/get_userslocation.shtml$</from>
+	   <to>/tjix.do?method=getUserLocation</to>
+	</rule>
+	
+	<!-- 查询更多商家地理位置信息 -->
+	<rule>
+	   <from>^/get_merchantslocation.shtml$</from>
+	   <to>/tjix.do?method=getMerchantsLocation</to>
+	</rule>
+	
+	<!-- 查询更多商家列表信息 -->
+	<rule>
+	   <from>^/get_moremerchants.shtml$</from>
+	   <to>/tjix.do?method=getMoreMerchants</to>
+	</rule>
+	
+	<!-- 查询更多商城商品信息大图 -->
+	<rule>
+	   <from>^/get_moremallall.shtml$</from>
+	   <to>/tjix.do?method=getMoreMallAllGoods</to>
+	</rule>
+	
+	<!-- 查询更多商家商品信息大图 -->
+	<rule>
+	   <from>^/get_moremerchantsall.shtml$</from>
+	   <to>/tjix.do?method=getMoreMerchantsAllGoods</to>
+	</rule>
+	
+	<!-- 查询更多商品信息大图 -->
+	<rule>
+	   <from>^/get_moreall.shtml$</from>
+	   <to>/tjix.do?method=getAllGoodsBig</to>
+	</rule>
+	
+	<!-- 查询更多商品信息列表 -->
+	<rule>
+	   <from>^/get_more.shtml$</from>
+	   <to>/tjix.do?method=getAllGoodsLittle</to>
+	</rule>
+	
+	<!-- 通过关键字搜索得到商品列表 -->
+	<rule>
+	   <from>^/getgoods.shtml$</from>
+	   <to>/tjix.do?method=getGoods</to>
+	</rule>
+	
+	
+	<!-- 用户确认收货 -->
+	<rule>
+	   <from>^/confirm_exchange.shtml$</from>
+	   <to>/tjix.do?method=ConfirmExchange</to>
+	</rule>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 查询商家商品的具体详细信息 -->
+	<rule>
+	   <from>^/get_merchantsgoods_details.shtml$</from>
+	   <to>/tjix.do?method=getMerchantsGoodsDetails</to>
+	</rule>
+	
+	<!-- 查询商家的具体详细信息 -->
+	<rule>
+	   <from>^/get_merchants_details.shtml$</from>
+	   <to>/tjix.do?method=getMerchantsDetails</to>
+	</rule>
+	
+	<!-- 异业联盟预览商家的具体详细信息 -->
+	<rule>
+	   <from>^/get_merchantsgoods_preview_details.shtml$</from>
+	   <to>/tjix.do?method=getMerchantsGoodsPreviewDetails</to>
+	</rule>
+	<!-- 查询商家接单商品列表 -->
+	<rule>
+	   <from>^/get_merchants_order.shtml$</from>
+	   <to>/tjix.do?method=getMerchantsOrder</to>
+	</rule>
+	
+	<!-- 兑换商品前先查询商品以及用户积分的具体详细信息 -->
+	<rule>
+	   <from>^/get_exchange_goods.shtml$</from>
+	   <to>/tjix.do?method=queryExchangeGoods</to>
+	</rule>
+	
+	<!-- 去付款-->
+	<rule>  
+	   <from>^/to_pay_goods.shtml$</from>
+	   <to>/tjix.do?method=addOrder</to>
+	</rule>
+	
+	<!-- 用户使用积分和金额兑换商品的具体实现 -->
+	<rule>
+	   <from>^/sava_exchange_goods.shtml$</from>
+	   <to>/tjix.do?method=saveUserExchange</to>
+	</rule>
+	
+	<rule>
+	   <from>^/readem_pay.shtml$</from>
+	   <to>/tjix.do?method=payReadem</to>
+	</rule>
+	<rule>
+	   <from>^/commit_pay.shtml$</from>
+	   <to>/tjix.do?method=payCommit</to>
+	</rule>
+	
+	<rule>
+	   <from>^/confirm_pay.shtml$</from>
+	   <to>/tjix.do?method=payCheck</to>
+	</rule>
+	
+	
+	
+	<rule>
+	   <from>^/help.shtml$</from>
+	   <to>/dic.do?method=help</to>
+	</rule>
+	
+	<rule>
+	   <from>^/index.shtml$</from>
+	   <to>/tjix.do?method=toindex</to>
+	</rule>
+	
+	
+	
+	
+	<!--                                                                   以下为移动端接口方法配置                                                                                                                                    -->
+	
+	<!-- 用户登录方法接口 -->
+	<rule>  
+	   <from>^/login_mob.shtml$</from>
+	   <to>/admin.do?method=login</to>
+	</rule>
+	
+	<!-- 用户注册-检测手机账号是否已注册 -->
+	<rule>  
+	   <from>^/checkPhone_mob.shtml$</from>
+	   <to>/admin.do?method=checkPhone</to>
+	</rule>
+	
+	<!-- 获取验证码 -->
+	<rule>  
+	   <from>^/getCode_mob.shtml$</from>
+	   <to>/admin.do?method=getCode</to>
+	</rule>
+	
+	<!-- 绑定银行卡之前，查询银行卡的行号以及地址 -->
+	<rule>  
+	   <from>^/queryBankNo_mob.shtml$</from>
+	   <to>/admin.do?method=queryBankNo</to>
+	</rule>
+	
+	<!-- 提交注册信息之前，核对绑定账号的银行卡信息是否正确 -->
+	<rule>  
+	   <from>^/checkBankcard_mob.shtml$</from>
+	   <to>/admin.do?method=checkBankcard</to>
+	</rule>
+	
+	<!-- 用户注册 -->
+	<rule>  
+	   <from>^/registered_mob.shtml$</from>
+	   <to>/admin.do?method=registered</to>
+	</rule>
+	
+	
+	<!-- 注册时添加用户的详细信息 -->
+	<rule>  
+	   <from>^/saveUserDetail_mob.shtml$</from>
+	   <to>/admin.do?method=saveUserDetail</to>
+	</rule>
+	
+	<!-- 忘记密码 找回密码  检查输入的手机号是否存在 -->
+	<rule>  
+	   <from>^/getPasswordCheckPhone_mob.shtml$</from>
+	   <to>/admin.do?method=getPasswordCheckPhone</to>
+	</rule>
+	
+	<!-- 忘记密码找回密码时，确认输入的手机号存在 检查用户证件是否有效 -->
+	<rule>  
+	   <from>^/checkIdentity_mob.shtml$</from>
+	   <to>/admin.do?method=checkIdentity</to>
+	</rule>
+	
+	<!-- 此为用户忘记密码通过证件修改密码 -->
+	<rule>  
+	   <from>^/resetPassword_mob.shtml$</from>
+	   <to>/admin.do?method=resetPassword</to>
+	</rule>
+	
+	<!-- 查询用户的详细信息 -->
+	<rule>  
+	   <from>^/queryUserDetail_mob.shtml$</from>
+	   <to>/admin.do?method=queryUserDetail</to>
+	</rule>
+	
+	
+	<!-- 此为用户登录后从用户中心去修改密码 -->
+	<rule>  
+	   <from>^/userResetPassword_mob.shtml$</from>
+	   <to>/admin.do?method=userResetPassword</to>
+	</rule>
+	
+	<!-- 查询用户的商圈信息 -->
+	<rule>  
+	   <from>^/queryUserCbd_mob.shtml$</from>
+	   <to>/admin.do?method=queryUserCbd</to>
+	</rule>
+	
+	<!-- 添加用户的商圈信息 -->
+	<rule>  
+	   <from>^/addUserCbd_mob.shtml$</from>
+	   <to>/admin.do?method=addUserCbd</to>
+	</rule>
+	
+	<!-- 查询返利信息 -->
+	<rule>  
+	   <from>^/queryUserSpread_mob.shtml$</from>
+	   <to>/admin.do?method=queryUserSpread</to>
+	</rule>
+	
+	<!-- 修改用户的商圈信息 -->
+	<rule>  
+	   <from>^/updateUserCbd_mob.shtml$</from>
+	   <to>/admin.do?method=updateUserCbd</to>
+	</rule>
+	
+	<!-- 删除用户的商圈信息 -->
+	<rule>  
+	   <from>^/delUserCdb_mob.shtml$</from>
+	   <to>/admin.do?method=delUserCdb</to>
+	</rule>
+	
+	<!-- 查询用户的收货人地址 -->
+	<rule>  
+	   <from>^/queryUserAddress_mob.shtml$</from>
+	   <to>/admin.do?method=queryUserAddress</to> 
+	</rule>
+	
+	<!-- 添加用户的收货人地址 -->
+	<rule>  
+	   <from>^/addUserAddress_mob.shtml$</from>
+	   <to>/admin.do?method=addUserAddress</to>
+	</rule>
+	
+	<!-- 修改用户的收货人地址-->
+	<rule>  
+	   <from>^/updateUserAddress_mob.shtml$</from>
+	   <to>/admin.do?method=updateUserAddress</to>
+	</rule>
+	
+	<!-- 删除用户的收货人地址-->
+	<rule>  
+	   <from>^/delUserAddress_mob.shtml$</from>
+	   <to>/admin.do?method=delUserAddress</to>
+	</rule>
+	
+	<!-- 查询用户的所有VIP卡列表-->
+	<rule>  
+	   <from>^/queryUserVip_mob.shtml$</from>
+	   <to>/admin.do?method=queryUserVip</to>
+	</rule>
+	
+	<!-- 用户添加商家会员卡-->
+	<rule>  
+	   <from>^/userAddVipcard_mob.shtml$</from>
+	   <to>/admin.do?method=userAddVipcard</to>
+	</rule>
+	
+	<!-- 用户删除会员卡-->
+	<rule>  
+	   <from>^/delUserVipcard_mob.shtml$</from>
+	   <to>/admin.do?method=delUserVipcard</to>
+	</rule>
+	
+	<!-- 查询用户的银行卡-->
+	<rule>  
+	   <from>^/queryUserBankCard_mob.shtml$</from>
+	   <to>/admin.do?method=queryUserBankCard</to>
+	</rule>
+	
+	<!-- 用户首次添加银行卡-->
+	<rule>  
+	   <from>^/userAddBankcard_mob.shtml$</from>
+	   <to>/admin.do?method=userAddBankcard</to>
+	</rule>
+	<!-- 用户此后添加银行卡-->
+	<rule>  
+	   <from>^/userSecondAddBankcard_mob.shtml$</from>
+	   <to>/admin.do?method=userSecondAddBankcard</to>
+	</rule>
+	
+	
+	<!-- 用户删除银行卡-->
+	<rule>  
+	   <from>^/delUserBankcard_mob.shtml$</from>
+	   <to>/admin.do?method=delUserBankcard</to>
+	</rule>
+	
+	<!-- 查询用户积分使用详情-->
+	<rule>  
+	   <from>^/getUserIntegralDeductionList_mob.shtml$</from>
+	   <to>/admin.do?method=getUserIntegralDeductionList</to>
+	</rule>
+	
+	<!-- 查询用户积分获得详情-->
+	<rule>  
+	   <from>^/getUserIntegralProduceList_mob.shtml$</from>
+	   <to>/admin.do?method=getUserIntegralProduceList</to>
+	</rule>
+	
+	<!-- 查询用户所有兑换-->
+	<rule>  
+	   <from>^/getUserExchangeList_mob.shtml$</from>
+	   <to>/admin.do?method=getUserExchangeList</to>
+	</rule>
+	
+	<!-- 用户添加积分兑换-->
+	<rule>  
+	   <from>^/saveUserExchange_mob.shtml$</from>
+	   <to>/admin.do?method=saveUserExchange</to>
+	</rule>
+	
+	
+	<!-- 用户添加全金额兑换-->
+	<rule>  
+	   <from>^/saveUserExchange_pay_mob.shtml$</from>
+	   <to>/admin.do?method=payMoney</to>
+	</rule>
+	<!-- 查询绑定的银行卡-->
+	<rule>  
+	   <from>^/pay_query_bind_bankcard_mob.shtml$</from>
+	   <to>/admin.do?method=queryBindBankcardList</to>
+	</rule>
+	<!-- 新添加的银行卡-->
+	<rule>  
+	   <from>^/pay_query_nobind_bankcard_mob.shtml$</from>
+	   <to>/admin.do?method=queryNobindBankcardList</to>
+	</rule>
+	<!-- 获取验证码，创建订单-->
+	<rule>  
+	   <from>^/pay_commit_mob.shtml$</from>
+	   <to>/admin.do?method=payCommit</to>
+	</rule>
+	<!-- 提交订单-->
+	<rule>  
+	   <from>^/pay_confirm_mob.shtml$</from>
+	   <to>/admin.do?method=payConfirm</to>
+	</rule>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 用户确认收货-->
+	<rule>  
+	   <from>^/confirmExchange_mob.shtml$</from>
+	   <to>/admin.do?method=confirmExchange</to>
+	</rule>
+	
+	<!-- 首页 -->
+	<rule>  
+	   <from>^/index_mob.shtml$</from>
+	   <to>/admin.do?method=index</to>
+	</rule>
+	
+	
+	<!-- 查询所有兑换商品信息列表 -->
+	<rule>  
+	   <from>^/getAllGoodsList_mob.shtml$</from>
+	   <to>/admin.do?method=getAllGoods</to>
+	</rule>
+	
+	<!-- 获取广告位商品列表 -->
+	<rule>  
+	   <from>^/getAdgoods_mob.shtml$</from>
+	   <to>/admin.do?method=getAddverstingGoods</to>
+	</rule>
+	
+	<!-- 获取积分商城商品列表 -->
+	<rule>  
+	   <from>^/getMallgoods_mob.shtml$</from>
+	   <to>/admin.do?method=getMallGoods</to>
+	</rule>
+	
+	<!-- 获取加盟商家商品列表 -->
+	<rule>  
+	   <from>^/getMerchantsgoods_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsGoods</to>
+	</rule>
+	
+	<!-- 按分类查询商品列表 -->
+	<rule>  
+	   <from>^/getgoodsbytid_mob.shtml$</from>
+	   <to>/admin.do?method=getGoodsByTid</to>
+	</rule>
+	
+	<!-- 按品牌查询商品列表 -->
+	<rule>  
+	   <from>^/getgoodsbybrand_mob.shtml$</from>
+	   <to>/admin.do?method=getGoodsByBrand</to>
+	</rule>
+	
+	<!-- 头部搜索商品 -->
+	<rule>  
+	   <from>^/getGoods_mob.shtml$</from>
+	   <to>/admin.do?method=getGoodsByWord</to>
+	</rule>
+	
+	<!-- 查询商品分类列表-->
+	<rule>  
+	   <from>^/getGoodsTid_mob.shtml$</from>
+	   <to>/admin.do?method=getGoodsTid</to>
+	</rule>
+	
+	<!-- 查询商品品牌列表 -->
+	<rule>  
+	   <from>^/getGoodsBrand_mob.shtml$</from>
+	   <to>/admin.do?method=getGoodsBrand</to>
+	</rule>
+	
+	<!-- 查询商品品牌列表 -->
+	<rule>  
+	   <from>^/getMerchantsList_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsList</to>
+	</rule>
+	
+	<!-- 查询某一个商家的所有兑换商品 -->
+	<rule>  
+	   <from>^/getGoodsByMid_mob.shtml$</from>
+	   <to>/admin.do?method=getGoodsByMid</to>
+	</rule>
+	
+	<!-- 查询某一个商家的详细信息 -->
+	<rule>  
+	   <from>^/getMerchantsDetails_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsDetails</to>
+	</rule>
+	
+	<!-- 查询某一个商家的会员卡列表信息 -->
+	<rule>  
+	   <from>^/getMerchantsDetailsVip_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsDetailsVip</to>
+	</rule>
+
+	<!-- 查询兑换商品的详细信息 -->
+	<rule>  
+	   <from>^/getGoodsDetails_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsGoodsDetails</to>
+	</rule>
+	
+	
+	<!-- 查询所有商家列表信息 -->
+	<rule>  
+	   <from>^/getMoreMerchants_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsList</to>
+	</rule>
+	
+	<!-- 按分类查询所有商家列表信息 -->
+	<rule>  
+	   <from>^/getMoreMerchantsByTid_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsListByTid</to>
+	</rule>
+	
+	<!-- 查询商家分类列表信息 -->
+	<rule>  
+	   <from>^/getMerchantsTid_mob.shtml$</from>
+	   <to>/admin.do?method=getMerchantsTid</to>
+	</rule>
+	
+	
+	
+	<!-- 查询所有商家会员卡列表信息 -->
+	<rule>  
+	   <from>^/getMoreMerchantsVipcard_mob.shtml$</from>
+	   <to>/admin.do?method=getMoreMerchantsVipcard</to>
+	</rule>
+	
+	<!-- 查询所有商家会员卡列表信息 -->
+	<rule>  
+	   <from>^/update_mob.shtml$</from>
+	   <to>/admin.do?method=update</to>
+	</rule>
+	
+	<!-- 查询所有商家会员卡列表信息 -->
+	<rule>  
+	   <from>^/utilitiesPay.shtml$</from>
+	   <to>/admin.do?method=utilitiesPay</to>
+	</rule>
+	
+	
+	
+	<!--                                                                  以下为移动端接口方法配置                                                                                                                                                -->
+	
+	<!--                                                                  以下为wap栈方法配置                                                                                                                                                -->
+
+	<!-- 用户登录方法接口 -->
+	<rule>  
+	   <from>^/login_wap.shtml$</from>
+	   <to>/authority.do?method=login</to>
+	</rule>
+	
+	<!-- 用户登录方法接口 -->
+	<rule>  
+	   <from>^/out_wap.shtml$</from>
+	   <to>/authority.do?method=logout</to>
+	</rule>
+	
+	<!-- 用户去注册 -->
+	<rule>  
+	   <from>^/to_register_wap.shtml$</from>
+	   <to>/authority.do?method=toRegister</to>
+	</rule>
+	
+	<!-- 用户注册-检测手机账号是否已注册 -->
+	<rule>  
+	   <from>^/checkPhone_wap.shtml$</from>
+	   <to>/authority.do?method=checkPhone</to>
+	</rule>
+	
+	<!-- 检测验证码 -->
+	<rule>  
+	   <from>^/registerOne_wap.shtml$</from>
+	   <to>/authority.do?method=registerOne</to>
+	</rule>
+	
+	<!-- 提交注册信息之前，核对绑定账号的银行卡信息是否正确  并注册 -->
+	<rule>  
+	   <from>^/registered_wap.shtml$</from>
+	   <to>/authority.do?method=checkBankcard</to>
+	</rule>
+	
+	
+	<!-- 注册时添加用户的详细信息 -->
+	<rule>  
+	   <from>^/saveUserDetail_wap.shtml$</from>
+	   <to>/authority.do?method=saveUserDetail</to>
+	</rule>
+	
+	<!-- 忘记密码 找回密码  检查输入的手机号是否存在 -->
+	<rule>  
+	   <from>^/getPasswordCheckPhone_wap.shtml$</from>
+	   <to>/authority.do?method=getPasswordCheckPhone</to>
+	</rule>
+	
+	<!-- 忘记密码找回密码时，确认输入的手机号存在 检查用户证件是否有效 -->
+	<rule>  
+	   <from>^/checkIdentity_wap.shtml$</from>
+	   <to>/authority.do?method=checkIdentity</to>
+	</rule>
+	
+	<!-- 用户忘记密码通过证件去修改密码 -->
+	<rule>  
+	   <from>^/toresetPassword_wap.shtml$</from>
+	   <to>/authority.do?method=toresetPassword</to>
+	</rule>
+	
+	<!-- 此为用户忘记密码通过证件修改密码 -->
+	<rule>  
+	   <from>^/resetPassword_wap.shtml$</from>
+	   <to>/authority.do?method=resetPassword</to>
+	</rule>
+	
+	<!-- 去个人中心 -->
+	<rule>  
+	   <from>^/toUserCenter_wap.shtml$</from>
+	   <to>/authority.do?method=toUserCenter</to>
+	</rule>
+	
+	<!-- 查询用户的详细信息 -->
+	<rule>  
+	   <from>^/queryUserDetail_wap.shtml$</from>
+	   <to>/authority.do?method=queryUserDetail</to>
+	</rule>
+	
+	<!-- 个人中心中修改用户的详细信息 -->
+	<rule>  
+	   <from>^/updateUserDetail_wap.shtml$</from>
+	   <to>/authority.do?method=updateUserDetail</to>
+	</rule>
+	
+	<!-- 此为用户登录后从用户中心去修改密码 -->
+	<rule>  
+	   <from>^/toUserResetPassword_wap.shtml$</from>
+	   <to>/authority.do?method=toUserResetPassword</to>
+	</rule>
+	
+	<!-- 此为用户登录后从用户中心去修改密码 -->
+	<rule>  
+	   <from>^/userResetPassword_wap.shtml$</from>
+	   <to>/authority.do?method=userResetPassword</to>
+	</rule>
+	
+	<!-- 查询用户的商圈信息 -->
+	<rule>  
+	   <from>^/queryUserCbd_wap.shtml$</from>
+	   <to>/authority.do?method=queryUserCbd</to>
+	</rule>
+	
+	<!-- 添加用户的商圈信息 -->
+	<rule>  
+	   <from>^/addUserCbd_wap.shtml$</from>
+	   <to>/authority.do?method=addUserCbd</to>
+	</rule>
+	
+	<!-- 修改用户的商圈信息 -->
+	<rule>  
+	   <from>^/toUpdateUserCbd_wap.shtml$</from>
+	   <to>/authority.do?method=toUpdateUserCbd</to>
+	</rule>
+	
+	<!-- 修改用户的商圈信息 -->
+	<rule>  
+	   <from>^/updateUserCbd_wap.shtml$</from>
+	   <to>/authority.do?method=updateUserCbd</to>
+	</rule>
+	
+	<!-- 删除用户的商圈信息 -->
+	<rule>  
+	   <from>^/delUserCdb_wap.shtml$</from>
+	   <to>/authority.do?method=delUserCdb</to>
+	</rule>
+	
+	<!-- 查询用户的收货人地址 -->
+	<rule>  
+	   <from>^/queryUserAddress_wap.shtml$</from>
+	   <to>/authority.do?method=queryUserAddress</to>
+	</rule>
+	
+	<!-- 添加用户的收货人地址 -->
+	<rule>  
+	   <from>^/addUserAddress_wap.shtml$</from>
+	   <to>/authority.do?method=addUserAddress</to>
+	</rule>
+	
+	<!-- 去修改用户的收货人地址-->
+	<rule>  
+	   <from>^/toUpdateUserAddress_wap.shtml$</from>
+	   <to>/authority.do?method=toUpdateUserAddress</to>
+	</rule>
+	
+	<!-- 修改用户的收货人地址-->
+	<rule>  
+	   <from>^/updateUserAddress_wap.shtml$</from>
+	   <to>/authority.do?method=updateUserAddress</to>
+	</rule>
+	
+	<!-- 删除用户的收货人地址-->
+	<rule>  
+	   <from>^/delUserAddress_wap.shtml$</from>
+	   <to>/authority.do?method=delUserAddress</to>
+	</rule>
+	
+	<!-- 查询用户的所有VIP卡列表-->
+	<rule>  
+	   <from>^/queryUserVip_wap.shtml$</from>
+	   <to>/authority.do?method=queryUserVip</to>
+	</rule>
+	
+	<!-- 用户添加商家会员卡前先查询-->
+	<rule>  
+	   <from>^/toUserAddVipcard_wap.shtml$</from>
+	   <to>/authority.do?method=toUserAddVipcard</to>
+	</rule>
+	
+	<!-- 用户添加商家会员卡-->
+	<rule>  
+	   <from>^/userAddVipcard_wap.shtml$</from>
+	   <to>/authority.do?method=userAddVipcard</to>
+	</rule>
+	
+	<!-- 用户删除会员卡-->
+	<rule>  
+	   <from>^/delUserVipcard_wap.shtml$</from>
+	   <to>/authority.do?method=delUserVipcard</to>
+	</rule>
+	
+	<!-- 查询用户的银行卡-->
+	<rule>  
+	   <from>^/queryUserBankCard_wap.shtml$</from>
+	   <to>/authority.do?method=queryUserBankCard</to>
+	</rule>
+	
+	<!-- 用户添加银行卡-->
+	<rule>  
+	   <from>^/userAddBankcard_wap.shtml$</from>
+	   <to>/authority.do?method=userAddBankcard</to>
+	</rule>
+	
+	<!-- 用户添加银行卡-->
+	<rule>  
+	   <from>^/to_userAddBankcard_wap.shtml$</from>
+	   <to>/authority.do?method=toUserAddBankcard</to>
+	</rule>
+	
+	<!-- 用户删除银行卡-->
+	<rule>  
+	   <from>^/delUserBankcard_wap.shtml$</from>
+	   <to>/authority.do?method=delUserBankcard</to>
+	</rule>
+	
+	<!-- 查询用户积分使用详情-->
+	<rule>  
+	   <from>^/getUserIntegralDeductionList_wap.shtml$</from>
+	   <to>/authority.do?method=getUserIntegralDeductionList</to>
+	</rule>
+	
+	<!-- 查询用户积分获得详情-->
+	<rule>  
+	   <from>^/getUserIntegralProduceList_wap.shtml$</from>
+	   <to>/authority.do?method=getUserIntegralProduceList</to>
+	</rule>
+	
+	<!-- 查询用户所有兑换-->
+	<rule>  
+	   <from>^/getUserExchangeList_wap.shtml$</from>
+	   <to>/authority.do?method=getUserExchangeList</to>
+	</rule>
+	
+	<!-- 用户添加兑换先查询相关信息-->
+	<rule>  
+	   <from>^/toSaveUserExchange_wap.shtml$</from>
+	   <to>/authority.do?method=toSaveUserExchange</to>
+	</rule>
+	
+	<!-- 用户添加兑换-->
+	<rule>  
+	   <from>^/saveUserExchange_wap.shtml$</from>
+	   <to>/authority.do?method=saveUserExchange</to>
+	</rule>
+	
+	
+
+	<!-- 用户添加全金额兑换-->
+	<rule>  
+	   <from>^/saveUserExchange_pay_wap.shtml$</from>
+	   <to>/authority.do?method=payMoney</to>
+	</rule>
+	<!-- 查询绑定的银行卡-->
+	<rule>  
+	   <from>^/pay_query_bind_bankcard_wap.shtml$</from>
+	   <to>/authority.do?method=queryBindBankcardList</to>
+	</rule>
+	<!-- 新添加的银行卡-->
+	<rule>  
+	   <from>^/pay_query_nobind_bankcard_wap.shtml$</from>
+	   <to>/authority.do?method=queryNobindBankcardList</to>
+	</rule>
+	<!-- 获取验证码，创建订单-->
+	<rule>  
+	   <from>^/pay_commit_wap.shtml$</from>
+	   <to>/authority.do?method=payCommit</to>
+	</rule>
+	<!-- 提交订单-->
+	<rule>  
+	   <from>^/pay_confirm_wap.shtml$</from>
+	   <to>/authority.do?method=payConfirm</to>
+	</rule>
+	
+	
+	
+	
+	
+	
+	
+	<!-- 用户确认收货-->
+	<rule>  
+	   <from>^/confirmExchange_wap.shtml$</from>
+	   <to>/authority.do?method=confirmExchange</to>
+	</rule>
+	
+	<!-- 首页 -->
+	<rule>  
+	   <from>^/index_wap.shtml$</from>
+	   <to>/authority.do?method=index</to>
+	</rule>
+	
+	<!-- 查询所有兑换商品信息列表 -->
+	<rule>  
+	   <from>^/getAllGoodsList_wap.shtml$</from>
+	   <to>/authority.do?method=getAllGoodsList</to>
+	</rule>
+	
+	<!-- 查询积分商城所有兑换商品信息列表 -->
+	<rule>  
+	   <from>^/getMallAllGoodsList_wap.shtml$</from>
+	   <to>/authority.do?method=getMallGoodsList</to>
+	</rule>
+	
+	<!-- 查询商家兑换商品信息列表 -->
+	<rule>  
+	   <from>^/getMerchantsAllGoodsList_wap.shtml$</from>
+	   <to>/authority.do?method=getAllMerchantsGoodsList</to>
+	</rule>
+	
+	<!-- 头部搜索商品 -->
+	<rule>  
+	   <from>^/getGoods_wap.shtml$</from>
+	   <to>/authority.do?method=getGoods</to>
+	</rule>
+	
+	<!-- 查询某一个商家的所有兑换商品 -->
+	<rule>  
+	   <from>^/getGoodsByMid_wap.shtml$</from>
+	   <to>/authority.do?method=getGoodsByMid</to>
+	</rule>
+	
+	<!-- 查询兑换商品的详细信息 -->
+	<rule>  
+	   <from>^/getExchangeGoods_wap.shtml$</from>
+	   <to>/authority.do?method=getExchangeGoodsDetails</to>
+	</rule>
+	
+	<!-- 查询兑换商品的详细信息 -->
+	<rule>  
+	   <from>^/getGoodsDetails_wap.shtml$</from>
+	   <to>/authority.do?method=getMerchantsGoodsDetails</to>
+	</rule>
+	
+	<!-- 查询商家列表信息 -->
+	<rule>  
+	   <from>^/getMoreMerchants_wap.shtml$</from>
+	   <to>/authority.do?method=getMoreMerchants</to>
+	</rule>
+	
+	<!-- 查询商家的详细信息(商品) -->
+	<rule>  
+	   <from>^/getMerchantsDetails_wap.shtml$</from>
+	   <to>/authority.do?method=getMerchantsDetails</to>
+	</rule>
+	
+	<!-- 查询商家的详细信息(会员卡) -->
+	<rule>  
+	   <from>^/getMerchantsDetailsVip_wap.shtml$</from>
+	   <to>/authority.do?method=getMerchantsDetailsVip</to>
+	</rule>
+	
+	<!-- 查询商家的详细信息(地图) -->
+	<rule>  
+	   <from>^/to_detail_map_wap.shtml$</from>
+	   <to>/authority.do?method=getMerchantsDetailsMap</to>
+	</rule>
+	
+	
+	
+	<!-- 查询所有商家会员卡列表信息 -->
+	<rule>  
+	   <from>^/getMoreMerchantsVipcard_wap.shtml$</from>
+	   <to>/authority.do?method=getMoreMerchantsVipcard</to>
+	</rule>
+	
+	<!-- 去我的地图 -->
+	<rule>  
+	   <from>^/toMap_wap.shtml$</from>
+	   <to>/authority.do?method=getUserLocation</to>
+	</rule>
+	
+	<!-- 查询返利信息 -->
+	<rule>  
+	   <from>^/to_queryUserSpread_wap.shtml$</from>
+	   <to>/authority.do?method=toQueryUserSpread</to>
+	</rule>
+	
+	<!-- 查询返利信息 -->
+	<rule>  
+	   <from>^/queryUserSpread_wap.shtml$</from>
+	   <to>/authority.do?method=queryUserSpread</to>
+	</rule>
+	
+	<!-- 根据类型显示商品数据 -->
+	<rule>  
+	   <from>^/getgoodsbytid_wap.shtml$</from>
+	   <to>/authority.do?method=getGoodsByTid</to>
+	</rule>
+	<!--                                                                  以下为wap栈方法配置                                                                                                                                                -->
+	
+	<!--                                                                  以下为创业中心方法配置                                                                                                                                                -->
+	<!-- 创业中心设置提现密码 -->
+	<rule>  
+	   <from>^/set_deposit_password_mob.shtml$</from>
+	  <to>/mymenu.do?method=setDepositPassword</to>
+	</rule>
+	<!-- 创业中心重置提现密码 -->
+	<rule>  
+	   <from>^/reset_deposit_password_mob.shtml$</from>
+	  <to>/mymenu.do?method=resetDepositPassword</to>
+	</rule>
+	<!-- 创业中心提交申请 -->
+	<rule>  
+	   <from>^/pioneer_add_request_mob.shtml$</from>
+	  <to>/mymenu.do?method=savePioneerOrder</to>
+	</rule>
+	<!--支付成功后后台执行方法（就业）-->
+	<rule>  
+	   <from>^/paysuccess_pioneer.shtml$</from>
+	   <to>/mymenu.do?method=payPioneerSuccess</to>
+	</rule>
+	
+	
+</urlrewrite>
+

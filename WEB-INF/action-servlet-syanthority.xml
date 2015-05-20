@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean name="/authority"
+		class="com.jmsht.web.action.SyAuthorityManagerAction" singleton="false">
+		<property name="serviceProxy">
+			<ref bean="JmshtServiceProxy" />
+		</property>
+		<property name="util">
+			<ref bean="loadRefenceBean" />
+		</property>
+		<property name="serviceId">
+			<value>SyAuthorityManager</value>
+		</property>
+		<property name="methodNames">
+			<value>getBankMessageByCard,getBankcardListByBankcardno,saveUserBank,getUserBankCardListByIdentity,getUserCbdList,saveUserCbd,updateUserCbd,updateUserCbdState,getUserAddressList,saveUserAddress,updateUserAddress,updateUserAddressState,getUserVipcardList,updateUserVipcardState,getUserBankCardList,updateUserBankcardState,getUserIntegralDeductionDetail,getUserIntegralProduceDetail,getUserExchangeList,updateUserExchangeStatus,saveUserVipcard,saveUserIntegralDeduction,saveRedeemCode,saveOrdrDateRecord,saveUserExchange,getUserVipcardDetail,queryUserAddressById,getUserCbdById,getUserVipcardListByVid,saveCheckBankRecord,getSpreadIntegralByUid,getMerchantsIntegralList,updateMerchantsIntegral,getTgSignList,saveTgSign,getTgSignListByUid,getMerchantsUserList,getBankcardByIdentity,getUserBankcardListByUid</value>
+		</property>
+	</bean>
+</beans>

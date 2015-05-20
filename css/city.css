@@ -1,0 +1,25 @@
+@charset "utf-8";
+/***
+@Author:     webpoin
+@Email:      1357113262@qq.com
+***/
+
+
+.mainbox{width: 1000px;margin: 0 auto;background: #fff;}
+/*选择城市*/
+.city_mod{ margin:0px 30px 30px 30px;}
+.go_city{ border-right:1px #e5e5e5 solid; display:inline-block; padding-right:10px; margin-right:10px; height:80px; color:#000}
+.go_city i a{ font-family:"microsoft yahei"; font-size:20px; color:#F00; font-weight:normal; margin:0px; margin-left:10px}
+.hot_city2{ font-size:16px; font-weight:bold; color:#18a3a3; line-height:80px; height:80px; padding-left:30px;  border-bottom:1px #e5e5e5 solid;}
+.hot_city2 a{ color:#18a3a3; margin:0px 13px;+margin:0px 11px; }
+.slt_city{ font-size:16px; font-weight:bold; color:#18a3a3; line-height:80px; height:80px;  border-bottom:1px #e5e5e5 solid;}
+.city_btn{ background:url(../images/bg2_script.png) 0px -2446px repeat-x; width:74px; height:26px; line-height:26px; text-align:center; font-size:14px; color:#FFF; font-weight:bold; border: none; cursor:pointer; margin-left:10px;}
+.city_btn:hover{ background:url(../images/bg2_script.png) 0px -2473px repeat-x;}
+.city_hd{ width:140px; height:32px; line-height:32px; font-weight:bold; border:1px #009899 solid; background:#18a3a3; margin-top:30px; text-align:center; font-size:16px; color: #FFF; position:relative; zoom:1}
+.city_hd b{ position:absolute; left:32px; bottom:-7px; background:url(../images/img_script.png) -202px -348px no-repeat; display:block; width:11px; height:7px;}
+.city_list{ margin-top:10px;}
+.city_list li{width: 860px;word-break: break-word; border-bottom:1px #e5e5e5 solid; padding:22px 22px 22px 54px; position:relative; zoom:1; font-size:14px; line-height:36px; color:#ccc}
+.city_list li.hover{ background:#f0f0f0}
+.city_list li a{ margin:0px 30px; color:#000; font-size:16px; }
+.city_list li b{ position:absolute; top:22px; left:22px; color:#ff3333; background:url(../images/img_script.png) -69px -907px no-repeat; width:36px; height:36px; line-height:36px; text-align:center; font-family:"宋体"; font-size:16px}
+.city_list li.hover b{ background:url(../images/img_script.png) -13px -907px no-repeat; color:#fff;_background:url(../images/img_script.gif) -13px -907px no-repeat;}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="TjixForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="pageid" type="java.lang.String" />
+			<form-property name="fr" type="java.lang.String" />
+			<form-property name="mid" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="uid" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />	
+			<form-property name="channel" type="java.lang.String"/>
+			<form-property name="key" type="java.lang.String"/>
+			<form-property name="key1" type="java.lang.String"/>
+			<form-property name="keypassword" type="java.lang.String"/>
+			<form-property name="years" type="java.lang.String"/>
+			<form-property name="month" type="java.lang.String"/>
+			<form-property name="day" type="java.lang.String"/>
+			<form-property name="hour" type="java.lang.String"/>
+			<form-property name="time" type="java.lang.String"/>
+			<form-property name="contactway" type="java.lang.String" />
+			<form-property name="content" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="username" type="java.lang.String" />
+			<form-property name="nickname" type="java.lang.String" />
+			<form-property name="mobiles" type="java.lang.String" />
+			<form-property name="gender" type="java.lang.String" />
+			<form-property name="imei" type="java.lang.String"/>
+			<form-property name="imsi" type="java.lang.String"/>
+			<form-property name="email" type="java.lang.String"/>
+			<form-property name="xml" type="java.lang.String" />
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="date" type="java.lang.String" />
+			<form-property name="number" type="java.lang.String"/>
+			<form-property name="pageNum" type="java.lang.String" />
+			<form-property name="numPerPage" type="java.lang.String" />
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="version" type="java.lang.String" />
+			<form-property name="package" type="java.lang.String" />
+			<form-property name="mac" type="java.lang.String" />
+			<form-property name="image" type="java.lang.String"/>
+			<form-property name="region" type="java.lang.String" />
+			<form-property name="autograph" type="java.lang.String" />
+			<form-property name="code" type="java.lang.String" />
+			<form-property name="state" type="java.lang.String" />
+			<form-property name="system" type="java.lang.String" />
+			<form-property name="orderPrice" type="java.lang.String"/>
+			<form-property name="postage" type="java.lang.String"/>
+			<form-property name="payway" type="java.lang.String"/>
+			<form-property name="address" type="java.lang.String"/>
+			<form-property name="bankno" type="java.lang.String"/>
+			<form-property name="bankcardno" type="java.lang.String"/>
+			<form-property name="storename" type="java.lang.String" />
+			<form-property name="startdate" type="java.lang.String" />
+			<form-property name="enddate" type="java.lang.String" />
+			<form-property name="realname" type="java.lang.String" />
+			<form-property name="identity" type="java.lang.String" />
+			<form-property name="detail" type="java.lang.String" />
+			<form-property name="bank" type="java.lang.String" />
+			<form-property name="start" type="java.lang.String" />
+			<form-property name="end" type="java.lang.String" />
+			<form-property name="aid" type="java.lang.String" />
+			<form-property name="money" type="java.lang.String" />
+			<form-property name="gid" type="java.lang.String" />
+			<form-property name="cname" type="java.lang.String" />
+			<form-property name="vid" type="java.lang.String" />
+			
+			
+			<form-property name="txOperSeqNo" type="java.lang.String"/>
+			<form-property name="tFlag" type="java.lang.String"/>
+			<form-property name="SMFlag" type="java.lang.String"/>
+			<form-property name="detailSeqNo" type="java.lang.String"/>
+			<form-property name="txdate" type="java.lang.String"/>
+			<form-property name="separateno" type="java.lang.String"/>
+		</form-bean>		
+	</form-beans>
+
+	<action-mappings>		
+		<action path="/tjix"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="TjixForm" parameter="method" scope="request"
+			validate="false">
+			<forward name="one181list" path="/web/tjix/one181list.jsp" />
+			<forward name="one181update" path="/web/tjix/one181update.jsp" />
+			<forward name="authentication" path="/tjix/email/authentication.jsp" />
+				
+			<forward name="index" path="/cglib/index.jsp" />
+			<forward name="to_login" path="/cglib/login.jsp" />
+			<forward name="to_merchants_detail" path="/cglib/details/merchants.jsp" />
+			
+			<forward name="to_user_exchange" path="/cglib/dialog/add_to_exchange.jsp" />
+			<forward name="user_exchange_res" path="/cglib/dialog/add_to_exchange_res.jsp" />
+			<forward name="user_exchange" path="/cglib/user/exchange.jsp" />
+			
+			<forward name="add_user_bank_res" path="/cglib/dialog/add_to_bankcard_res.jsp" />
+			
+			<forward name="to_vipcard_bank" path="/cglib/dialog/vipcard.jsp" />
+			<forward name="vipcard_success" path="/cglib/dialog/vipcard_success.jsp" />
+			<forward name="vipcard_fail" path="/cglib/dialog/vipcard_fail.jsp" />
+			
+			
+			
+			<forward name="user_integral_deduction" path="/cglib/user/integraldeduction.jsp" />
+			<forward name="user_integral_produce" path="/cglib/user/integralproduce.jsp" />
+			
+			
+			
+			<forward name="to_merchantsVipcardlist" path="/cglib/list/list_card.jsp" />
+			
+			<forward name="to_merchantslist" path="/cglib/list/list_shop.jsp" />
+			<forward name="to_goodslist_item" path="/cglib/list/list_item.jsp" />
+			<forward name="to_goodslist_all" path="/cglib/list/list_all.jsp" />
+			
+			
+			<forward name="to_merchantsgoods_details" path="/cglib/details/details.jsp" />
+			<forward name="to_merchantsgoods_preview_details" path="/cglib/details/preview_details.jsp" />
+			<forward name="to_merchants_details" path="/cglib/details/details_shop.jsp" />
+			
+			
+			<forward name="to_mallgoods_details" path="/cglib/details/mallgoodsdetails.jsp" />
+			
+			<forward name="to_goods_exchange" path="/cglib/dialog/exchange.jsp" />
+			<forward name="to_goods_pay" path="/cglib/dialog/pay.jsp" />
+			
+			<forward name="exchange_fail" path="/cglib/dialog/exchange_fail.jsp" />
+			<forward name="exchange_success" path="/cglib/dialog/exchange_success.jsp" />
+			
+			<forward name="merchants_location" path="/cglib/map/map.jsp" />
+			
+			<forward name="send" path="/cglib/pay/index.jsp" /> 
+			<forward name="check" path="/cglib/pay/check.jsp" />
+			
+		</action>		
+	</action-mappings>
+
+</struts-config>

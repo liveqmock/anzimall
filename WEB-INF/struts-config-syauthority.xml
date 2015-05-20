@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="authorityForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+		<form-property name="type" type="java.lang.String" />
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="pageid" type="java.lang.String" />
+			<form-property name="fr" type="java.lang.String" />
+			<form-property name="p" type="java.lang.String" />
+			<form-property name="cid" type="java.lang.String" />
+			<form-property name="url" type="java.lang.String" />	
+			<form-property name="channel" type="java.lang.String"/>
+			<form-property name="key" type="java.lang.String"/>
+			<form-property name="keyword" type="java.lang.String"/>
+			<form-property name="key1" type="java.lang.String"/>
+			<form-property name="key2" type="java.lang.String"/>
+			<form-property name="content" type="java.lang.String" />
+			<form-property name="contact" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="a" type="java.lang.String" />
+			<form-property name="stars" type="java.lang.String" />
+			<form-property name="pid" type="java.lang.String" />
+			<form-property name="status" type="java.lang.String" />
+			<form-property name="description" type="java.lang.String" />
+			<form-property name="pageNum"   type="java.lang.String" />
+			<form-property name="numPerPage"   type="java.lang.String" />
+		</form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/authority"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="authorityForm" parameter="method" scope="request" validate="false">
+		<forward name="authoritylist" path="/web/authority/authoritylist.jsp" />
+		<forward name="authority" path="/web/authority/addauthority.jsp" />
+		<forward name="usertoauthlist" path="/web/authority/usertoauthlist.jsp" />
+		
+		<forward name="index" path="/wap/index.jsp" />
+		<forward name="to_goods_list" path="/wap/list/list_products.jsp" />
+		<forward name="to_goods_exchange" path="/wap/detail/detail_product.jsp" />
+		<forward name="to_goods_details" path="/wap/detail/detail_article.jsp" />
+		<forward name="to_list_vipcard" path="/wap/list/list_cards.jsp" />
+		<forward name="to_list_merchants" path="/wap/list/list_stores.jsp" />
+		
+		<forward name="to_merchants_map" path="/wap/detail/detail_map.jsp" />
+		
+		<forward name="to_merchants_goods" path="/wap/detail/detail_store.jsp" />
+		<forward name="to_merchants_vip" path="/wap/detail/detail_card.jsp" />
+		<forward name="to_login" path="/wap/login.jsp" />
+		<forward name="to_password_basic" path="/wap/password/password_basic.jsp" />
+		<forward name="to_change_password" path="/wap/password/password_reset.jsp" />
+		<forward name="password_fail" path="/wap/password/password_fail.jsp" />
+		<forward name="password_success" path="/wap/password/password_success.jsp" />
+		
+		<forward name="register_fail" path="/wap/register/register_fail.jsp" />
+		<forward name="to_register_basic" path="/wap/register/register_basic.jsp" />
+		<forward name="to_register_bank" path="/wap/register/register_bank.jsp" />
+		<forward name="register_success" path="/wap/register/register_success.jsp" />
+		
+		
+		<forward name="to_center" path="/wap/center/user.jsp" />
+		<forward name="to_user_address" path="/wap/center/address.jsp" />
+		<forward name="to_update_useraddress" path="/wap/center/address_reset.jsp" />
+		<forward name="to_user_vipcard" path="/wap/center/vipcard.jsp" />
+		<forward name="to_user_bankcard" path="/wap/center/bankcard.jsp" />
+		<forward name="to_bankcard_add" path="/wap/center/bankcard_add.jsp" />
+		<forward name="to_user_cbd" path="/wap/center/circle.jsp" />
+		<forward name="to_update_usercbd" path="/wap/center/circle_reset.jsp" />
+		<forward name="to_user_exchange" path="/wap/center/exchange.jsp" />
+		<forward name="to_integral_use" path="/wap/center/integral_use.jsp" />
+		<forward name="to_integral_get" path="/wap/center/integral_get.jsp" />
+		<forward name="to_basic_password" path="/wap/center/basic_password.jsp" />
+		<forward name="to_user_detail" path="/wap/center/basic.jsp" />
+		<forward name="to_user_detail_setting" path="/wap/center/basic_setting.jsp" />
+		
+		<forward name="to_exchange" path="/wap/detail/exchange.jsp" />
+		<forward name="exchange_fail" path="/wap/detail/exchange_fail.jsp" />
+		<forward name="exchange_success" path="/wap/detail/exchange_success.jsp" />
+		
+		<forward name="to_vipcard" path="/wap/detail/vipcard.jsp" />
+		<forward name="vipcard_fail" path="/wap/detail/vipcard_fail.jsp" />
+		<forward name="vipcard_success" path="/wap/detail/vipcard_success.jsp" />
+		
+		<forward name="merchants_location" path="/wap/nearby/map.jsp" />
+		<forward name="to_user_spread" path="/wap/center/lottery_list.jsp" />
+		<forward name="to_queryUserSpread" path="/wap/center/lottery.jsp" />
+		<forward name="list_products_by_type" path="/wap/list/list_products_by_type.jsp" />
+		
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>
